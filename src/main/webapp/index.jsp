@@ -6,35 +6,77 @@
   To change this template use File | Settings | File Templates.
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
- <html>
+<html lang="en">
+
 <head>
-    <title>Add Procuct</title>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Simple Sidebar - Start Bootstrap Template</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="template/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="template/css/simple-sidebar.css" rel="stylesheet">
+
 </head>
+
 <body>
-<form method="post" action="product">
 
-    <label for="categoryId">Category</label>
-    <select id="categoryId" name="Category">
-        <option value="1">Meyve</option>
-        <option value="2">Terevez</option>
-        <option value="3">Elektronik</option>
-        <option value="4">Guvenlik</option>
-    </select>
-    <br>
-    <label for="unitId">Unit</label>
-    <select id="unitId" name="Unit">
-        <option value="1">KG</option>
-        <option value="2">EDED</option>
-        <option value="3">PAKET</option>
-    </select>
-    <br>
-    <label for="nameId">Name</label>
-    <input type="text" name="Name" id="nameId" autocomplete="off"><br>
+<div class="d-flex" id="wrapper">
 
-    <label for="priceId">Price</label>
-    <input type="number" name="Price" id="priceId" autocomplete="off"><br>
-    <input type="submit" value="send">
-</form>
+    <!-- Sidebar -->
+    <div class="bg-light border-right" id="sidebar-wrapper">
+        <div class="sidebar-heading">ADMIN PANEL</div>
+        <div class="list-group list-group-flush">
+            <a href="store" class="list-group-item list-group-item-action bg-light">STORE</a>
+            <a href="product" class="list-group-item list-group-item-action bg-light">PRODUCTS</a>
+            <a href="sale" class="list-group-item list-group-item-action bg-light">SALE</a>
+            <a href="#" class="list-group-item list-group-item-action bg-light">STORE ACCOUNT</a>
+            <a href="#" class="list-group-item list-group-item-action bg-light">ADD PRODUCT</a>
+        </div>
+    </div>
+    <!-- /#sidebar-wrapper -->
+
+    <!-- Page Content -->
+    <div id="page-content-wrapper">
+
+        <nav class="navbar navbar-expand-lg navbar-light bg-light border-bottom">
+            <button class="btn btn-primary" id="menu-toggle">Toggle Menu</button>
+
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+
+            </div>
+        </nav>
+
+        <div class="container-fluid">
+        </div>
+    </div>
+    <!-- /#page-content-wrapper -->
+
+</div>
+<!-- /#wrapper -->
+
+<!-- Bootstrap core JavaScript -->
+<script src="template/js/jquery.min.js"></script>
+<script src="template/js/bootstrap.bundle.min.js"></script>
+
+<!-- Menu Toggle Script -->
+<script>
+    $("#menu-toggle").click(function(e) {
+        e.preventDefault();
+        $("#wrapper").toggleClass("toggled");
+    });
+</script>
 
 </body>
+
 </html>

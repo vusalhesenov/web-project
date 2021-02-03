@@ -5,6 +5,7 @@ public class Product extends Base{
     private Double price;
     private Category category;
     private Unit unit;
+    private Integer isActive;
 
     public Product() {
     }
@@ -58,6 +59,14 @@ public class Product extends Base{
         this.unit = unit;
     }
 
+    public Integer getIsActive() {
+        return isActive;
+    }
+
+    public void setIsActive(Integer isActive) {
+        this.isActive = isActive;
+    }
+
     @Override
     public String toString() {
         return "Product{" +
@@ -65,6 +74,7 @@ public class Product extends Base{
                 ", price=" + price +
                 ", category=" + category +
                 ", unit=" + unit +
+                ", isActive=" + isActive +
                 ", id=" + id +
                 '}';
     }
